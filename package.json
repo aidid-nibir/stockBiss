@@ -1,0 +1,40 @@
+{
+  "name": "stockBiss",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios --simulator='iPhone 14 Pro'",
+    "pod": "cd ios; pod install; cd ..",
+    "pod:update": "cd ios; pod update; cd ..",
+    "ios12": "react-native run-ios --scheme Development --simulator='iPhone 12'",
+    "start": "react-native start",
+    "start:clean": "react-native start --reset-cache",
+    "apk": "cd android; ./gradlew clean; ./gradlew assembleRelease; cd ..",
+    "abb": "cd android; ./gradlew clean; ./gradlew bundleRelease; cd ..",
+    "clean": "npx react-native-clean-project",
+    "gradle": "cd android; ./gradlew clean; cd ..",
+    "pod-m1": "cd ios && arch -x86_64 pod install && cd ..",
+    "setup": "yarn; yarn pod; yarn gradle",
+    "test": "jest",
+    "lint": "eslint .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "0.72.3",
+    "react-test-renderer": "18.1.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
